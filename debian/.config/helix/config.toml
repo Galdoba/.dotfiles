@@ -1,0 +1,24 @@
+theme = "dark_plus"
+
+[editor]
+line-number = "relative"
+scroll-lines = 1
+cursorline = true
+bufferline = "multiple"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+
+[editor.lsp]
+display-messages = true
+
+[keys.normal]
+C-s = ":w"  #Save buffer to file
+C-r = ":config-reload" #
+
+[keys.insert]
+C-s = ["normal_mode",":w", "normal_mode"] #Save buffer to file and stay in normal mode
+
+# theme = "onelight"asdasd
+
