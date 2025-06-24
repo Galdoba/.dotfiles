@@ -1,0 +1,79 @@
+theme = "dark_plus"
+
+[editor]
+# line-number = "relative"
+scroll-lines = 1
+cursorline = true
+completion-timeout = 80
+bufferline = "multiple"
+popup-border = "all"
+default-line-ending = "lf"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.lsp]
+display-messages = true
+
+[keys.normal]
+C-s = ":w"  #Save buffer to file
+C-r = ":config-reload" #
+ret = ["insert_mode"] #
+C-pageup = ["goto_previous_buffer"]
+C-pagedown = ["goto_next_buffer"]
+C-right = ["move_next_sub_word_end", "trim_selections"]#,"asjkdh askjdh asdkjf kdjhfdj hasdj hjads falkj h"]
+C-S-right = ["move_next_sub_word_end", "trim_selections", "select_mode"]#,"asjkdh askjdh asdkjf kdjhfdj hasdj hjads falkj h"]
+C-left  = ["move_prev_sub_word_start", "trim_selections"]#,""]
+del = ["delete_selection"]
+esc = ["keep_primary_selection", "move_char_left", "move_char_right"]
+C-d = ["search_selection", "search_next", "keep_primary_selection"]
+C-e = ["search_selection", "search_prev", "keep_primary_selection"]
+C-S-end = ["select_mode","goto_line_end"]
+C-S-home = ["select_mode","goto_line_start"]
+S-right= ["select_mode","extend_char_right"]
+S-left= ["select_mode","extend_char_left"]
+
+[keys.insert]
+C-s = ["normal_mode",":w", "normal_mode"] #Save buffer to file and stay in normal mode
+C-space    = ["normal_mode", "keep_primary_selection"]
+C-right    = ["move_next_sub_word_end", "extend_char_right", "trim_selections"]#,"move_next_sub_word_end"]
+C-S-right  = ["normal_mode","extend_next_sub_word_end",   "append_mode"]#,"move_next_sub_word_end"]
+C-left     = ["move_prev_sub_word_start", "trim_selections"]#,""]
+C-S-left   = ["extend_prev_sub_word_start", "insert_mode"]#,"move_next_sub_word_end"]
+C-pageup   = ["goto_previous_buffer"]
+C-pagedown = ["goto_next_buffer"]
+del        = ["delete_selection"]
+C-S-home   = ["select_mode","goto_line_start", "select_mode"]
+C-S-end    = ["select_mode","goto_line_end"]
+S-home   = ["goto_line_start"]
+S-end    = ["goto_line_end", "append_mode"]
+# S-r
+# S-right = ["", "]
+# S-left = ["", "]
+# S-left = ["", "]
+
+
+[keys.select]
+C-space = ["normal_mode"]
+C-pageup = ["goto_previous_buffer"]
+C-pagedown = ["goto_next_buffer"]
+C-right = ["move_next_word_end"]#,"asjkdh askjdh asdkjf kdjhfdj hasdj hjads falkj h"]
+C-S-right = ["extend_next_sub_word_end"]#,"asjkdh askjdh asdkjf kdjhfdj hasdj hjads falkj h"]
+C-left  = ["move_prev_word_start"]#,""]
+C-S-left = ["extend_prev_sub_word_start"]#,"asjkdh askjdh asdkjf kdjhfdj hasdj hjads falkj h"]
+C-d = ["normal_mode","search_selection", "search_next", "keep_primary_selection","select_mode"]
+C-e = ["normal_mode","search_selection", "search_prev", "keep_primary_selection","select_mode"]
+S-right= ["extend_char_right"]
+S-left= ["extend_char_left"]
+# t"onelight
+# "d
+
+[editor.statusline]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+left   = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
+center = []#
+right  = ["register","diagnostics", "selections", "register", "position","total-line-numbers", "file-encoding","file-line-ending"]
