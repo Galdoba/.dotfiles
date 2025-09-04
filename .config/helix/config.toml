@@ -65,9 +65,12 @@ C-left  = ["move_prev_word_start"]#,""]
 C-S-left = ["extend_prev_sub_word_start"]#,"asjkdh askjdh asdkjf kdjhfdj hasdj hjads falkj h"]
 C-d = ["normal_mode","search_selection", "search_next", "keep_primary_selection","select_mode"]
 C-e = ["normal_mode","search_selection", "search_prev", "keep_primary_selection","select_mode"]
-S-right= ["extend_char_right"]
-S-left= ["extend_char_left"]
-# t"onelight
+C-S-end = ["select_mode","goto_line_end"]
+C-S-home = ["select_mode","goto_line_start"]
+S-right= ["select_mode","extend_char_right"]
+S-left= ["select_mode","extend_char_left"]
+del = ["delete_selection"]
+# t"oight
 # "d
 
 [editor.statusline]
