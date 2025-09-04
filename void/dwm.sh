@@ -1,9 +1,6 @@
-#!bin/bash
-#dwm: build from source and setup
-
-#install dwm dependancies
-sudo xbps-install -Syu xorg git dmenu base-devel libX11-devel libXft-devel libXinerama-devel freetype-devel fontconfig-devel  
-
+#!/bin/bash
+#
+sudo xbps-install -Syu xorg git dmenu base-devel libX11-devel libXft-devel libXinerama-devel freetype-devel fontconfig-devel 
 #download sources for window manager, terminal and browser
 mkdir ~/.sources
 mkdir ~/.sources
